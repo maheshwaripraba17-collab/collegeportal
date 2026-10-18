@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema(
@@ -17,6 +16,11 @@ const userSchema = new mongoose.Schema(
       trim: true
     },
 
+    phone: {
+      type: String,
+      trim: true
+    },
+
     password: {
       type: String,
       required: true,
@@ -24,10 +28,11 @@ const userSchema = new mongoose.Schema(
     },
 
     role: {
-    type: String,
-    enum: ['Student', 'Teacher'],
-    required: true
-},
+      type: String,
+      enum: ['Student', 'Teacher'],
+      required: true
+    },
+
     department: {
       type: String,
       required: true
